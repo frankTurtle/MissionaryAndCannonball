@@ -12,6 +12,11 @@ public class MissionaryAndCannibal {
     public static void main( String[] args ){
         Board newBoard = new Board();
 
-        System.out.println( newBoard.equals(new Board( new int[]{ 3,0,0,3,0 }, 0) ));
+        System.out.println( newBoard );
+
+//        System.out.println( newBoard.equals(new Board( new int[]{ 3,0,0,3,0 }, 0) ));
+//        System.out.println( newBoard.isValidBoard( newBoard ));
+        newBoard.equals(new Board( new int[]{ 2,0,3,0,1 }, 0) );
+        System.out.println( newBoard.isValidBoard( newBoard ));
     }
 }
