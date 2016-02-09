@@ -9,21 +9,24 @@
  */
 
 public class Board {
-    private int[] board;
     final static int RIGHT = 0;
     final int LEFT = 1;
     final int[] GOAL_STATE = new int[]{ 0,0,3,3, RIGHT }; //. ideal state, when we're done
+    private int[] board;
+    private int currentLevel;
 
     // Default constructor
     public Board(){
         this.board = new int[]{ 0,0,3,3, RIGHT };
+        currentLevel = 0;
     }
 
     // Constructor with parameters
     // takes in an array to create a new board with
-    public Board( int[] arrayIn ){
+    public Board( int[] arrayIn, int level ){
         this.board = new int[ arrayIn.length ]; //................... instantiates local array
         System.arraycopy( arrayIn, 0, board, 0, arrayIn.length ); //. copy the one passed in
+        currentLevel = level; //..................................... sets current level of the object
     }
 
     // Method to get the board as an array
@@ -41,6 +44,7 @@ public class Board {
     //    Missionaries Right:  3
     //       Cannibals Right:  3
     //             Boat Side:  Right
+    //         Current Value:  0
     public String toString(){
         String returnString = "";
         String[] labels = { "Missionaries Left: ",
@@ -58,7 +62,34 @@ public class Board {
             }
         }
 
-        return returnString;
+        return returnString += String.format( "%21s %d%n", "Current Value: ", this.getValue() );
     }
 
+    // Method to get the value
+    // determined by the following
+    // 3 points for each Missionary on the Left
+    // 2 points for each Cannibal on the Left
+    // 1 point if the boat is on the Left
+    // n points based on the current level
+    public int getValue(){
+        int returnValue = 0;
+
+        for( int i = 0; i < this.board.length; i++ ){
+            switch( i ){
+                case 0: //........................................ Missionary Left
+                    returnValue += ( 3 * this.board[i] );
+                    break;
+
+                case 1: //........................................ Cannibal Left
+                    returnValue += ( 2 * this.board[i] );
+                    break;
+
+                case 4: //........................................ Boat location
+                    if( this.board[i] == LEFT ) returnValue += 1;
+                    break;
+            }
+        }
+
+        return (returnValue + currentLevel); //................... add in current level
+    }
 }

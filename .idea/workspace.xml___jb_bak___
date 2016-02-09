@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="586952d7-6b0d-4ee4-9806-a7238522494d" name="Default" comment="">
+    <list default="true" id="586952d7-6b0d-4ee4-9806-a7238522494d" name="Default" comment="added a current level to each board object&#10;updated constructors&#10;changed toSTring to include the current value of the board&#10;wrote getValue method to get the current value of the board">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml___jb_bak___" afterPath="$PROJECT_DIR$/.idea/workspace.xml___jb_bak___" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Board.java" afterPath="$PROJECT_DIR$/src/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MissionaryAndCannibal.java" afterPath="$PROJECT_DIR$/src/MissionaryAndCannibal.java" />
     </list>
     <ignored path="MissionaryAndCannonball.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +28,13 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21996616">
-              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+            <state vertical-scroll-proportion="1.284264">
+              <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
               <folding>
+                <element signature="method#Board#1;class#Board#0" expanded="false" />
                 <element signature="method#getBoard#0;class#Board#0" expanded="false" />
+                <element signature="method#toString#0;class#Board#0" expanded="false" />
+                <element signature="method#getValue#0;class#Board#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -390,21 +392,33 @@
       <option name="project" value="LOCAL" />
       <updated>1454978655493</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated formatting of toString output&#10;prints word instead of number for where the boat is located now">
+      <created>1454979152466</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1454979152466</updated>
+    </task>
+    <task id="LOCAL-00003" summary="changed comment">
+      <created>1454979255299</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1454979255299</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.122068234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -426,7 +440,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit, &#10;added Board and MissionaryAndCannibal classes&#10;tested out toString override" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit, &#10;added Board and MissionaryAndCannibal classes&#10;tested out toString override" />
+    <MESSAGE value="updated formatting of toString output&#10;prints word instead of number for where the boat is located now" />
+    <MESSAGE value="changed comment" />
+    <MESSAGE value="added a current level to each board object&#10;updated constructors&#10;changed toSTring to include the current value of the board&#10;wrote getValue method to get the current value of the board" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a current level to each board object&#10;updated constructors&#10;changed toSTring to include the current value of the board&#10;wrote getValue method to get the current value of the board" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -447,10 +464,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21996616">
-          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        <state vertical-scroll-proportion="1.284264">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
           <folding>
+            <element signature="method#Board#1;class#Board#0" expanded="false" />
             <element signature="method#getBoard#0;class#Board#0" expanded="false" />
+            <element signature="method#toString#0;class#Board#0" expanded="false" />
+            <element signature="method#getValue#0;class#Board#0" expanded="false" />
           </folding>
         </state>
       </provider>
