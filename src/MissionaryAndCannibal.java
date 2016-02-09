@@ -7,6 +7,7 @@
  * Author: Barret J. Nobel
  * Contact: bear.nobel at gmail
  */
+
 public class MissionaryAndCannibal {
     public static void main( String[] args ){
         Board newBoard = new Board();
