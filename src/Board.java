@@ -40,7 +40,7 @@ public class Board {
     //        Cannibals Left:  0
     //    Missionaries Right:  3
     //       Cannibals Right:  3
-    //             Boat Side:  0
+    //             Boat Side:  Right
     public String toString(){
         String returnString = "";
         String[] labels = { "Missionaries Left: ",
