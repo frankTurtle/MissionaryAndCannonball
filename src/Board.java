@@ -1,3 +1,5 @@
+import com.sun.org.apache.bcel.internal.generic.GOTO;
+
 /**
  * Board class
  * this class represents the gameboard at a current state
@@ -11,14 +13,18 @@ public class Board {
     private int[] board;
     final static int RIGHT = 0;
     final int LEFT = 1;
-    final int[] GOAL_STATE = new Board().getBoard();
+    final int[] GOAL_STATE = new int[]{ 0,0,3,3, RIGHT };
 
     public Board(){
-        this( new int[]{0,0,3,3,RIGHT} );
+        this.board = new int[]{ 0,0,3,3, RIGHT };
     }
 
     public Board( int[] arrayIn ){
-        board = new int[ arrayIn.length ];
+
+        for( int num: arrayIn) {
+            System.out.println(num);
+        }
+        this.board = new int[ arrayIn.length ];
         System.arraycopy( arrayIn, 0, board, 0, arrayIn.length );
     }
 
@@ -31,13 +37,13 @@ public class Board {
     public String toString(){
         String returnString = "";
         String[] labels = { "Missionaries Left: ",
-                "Cannibals Left: ",
-                "Missionaries Right: ",
-                "Cannibals Right: ",
-                "Boat Side: "};
+                            "Cannibals Left: ",
+                            "Missionaries Right: ",
+                            "Cannibals Right: ",
+                            "Boat Side: "};
 
         for( int i = 0; i < labels.length; i++ ){
-            returnString += String.format( "%s %d", labels[i], board[i] );
+            returnString += String.format( "%21s %d%n", labels[i], board[i] );
         }
 
         return returnString;
