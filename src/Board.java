@@ -65,6 +65,20 @@ public class Board {
         return returnString += String.format( "%21s %d%n", "Current Value: ", this.getValue() );
     }
 
+    // Method to check if the object is equal
+    // Overrides equals method
+    public boolean equals( Object checkMe ){
+        if( this == checkMe )return true; //................................. if it is itself then it equals itself ... GO FIGURE!
+        if( !(checkMe instanceof Board) ) return false; //................... if its not even an object of this class it's clearly not going to be equal
+
+        Board compareTo = (Board) checkMe; //................................ cast the object to check instance variables
+        for( int i = 0; i < compareTo.getBoard().length; i++ ){
+            if( compareTo.getBoard()[i] != this.board[i] ) return false;
+        }
+
+        return compareTo.currentLevel == this.currentLevel; //............... compare levels
+    }
+
     // Method to get the value
     // determined by the following
     // 3 points for each Missionary on the Left
@@ -92,4 +106,8 @@ public class Board {
 
         return (returnValue + currentLevel); //................... add in current level
     }
+
+//    public Board[] getAvailableMoves(){
+//
+//    }
 }
